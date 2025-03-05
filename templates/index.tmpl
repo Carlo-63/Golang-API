@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    div {
+      border: solid black 2px;
+      width: 350px;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #89fff5ee;
+      border-radius: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    button {
+      height: 30px;
+      width: 100px;
+      border-radius: 5px;
+      border: solid transparent;
+      background-color: white;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <div>
+      <h1>Nome: {{.nome}}</h1>
+      <p>Lavoro: {{.lavoro}}</p>
+      <button>Chiudi</button>
+    </div>
+  </body>
+  <script>
+    const button = document.querySelector("button");
+    button.addEventListener("click", () => {
+      const card = document.querySelector("div");
+      card.style.display = "none";
+    });
+  </script>
+</html>
